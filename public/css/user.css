@@ -1,0 +1,107 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.main-wrapper {
+    padding: 20px;
+    position: relative;
+}
+
+.gui-wrapper-1 {
+    margin-bottom: 2rem;
+}
+
+.gui-main-1 {
+    position: relative;
+    max-width: 90%;
+    width: 600px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #000;
+}
+
+h2.gui-title {
+    font-weight: 700;
+}
+
+.gui-row {
+    margin-top: 1rem;
+}
+
+.gui-field {
+    display: flex;
+}
+
+.gui-field label {
+    width: 25%;
+    padding-right: 1rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.gui-field input {
+    width: 75%;
+}
+
+.gui-field button {
+    width: 75%;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.group-button {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.btn-back,
+.btn-pdf {
+    width: 15%;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+button.btn-pdf {
+    background: #fff;
+}
+
+.btn-back:hover,
+.btn-pdf:hover {
+    color: #fff;
+    background-color: darkorange;
+    border-color: darkorange;
+}
+
+.btn-email-group {
+    width: 70%;
+}
+
+.gui-field.gui-field-2 input {
+    width: 75%;
+    border: 1px solid #000;
+    border-radius: 0;
+}
+
+.gui-field.gui-field-2 .btn-email {
+    border: 1px solid #000;
+    border-right: none !important;
+    width: 25%;
+    padding-right: 1rem;
+    text-align: center;
+    padding: 12px;
+}
