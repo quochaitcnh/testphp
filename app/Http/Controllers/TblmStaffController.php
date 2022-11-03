@@ -30,12 +30,11 @@ class TblmStaffController extends Controller
     {
         $users = $this->tblmStaffService->getAllFromTo($request);
         $pdf = Pdf::loadView('admin.user.pdfview', compact('users'));
-        // Mail::send('admin.user.mail', compact('request'), function ($message) use ($request, $pdf) {
-        //     $message->to($request->email, $request->email)
-        //         ->subject("Test send mail Staff")
-        //         ->attachData($pdf->output(), 'tblmstaff-'.$request->from.'-'. $request->to .'.pdf');
-        // });         
-        // return $pdf->download('tblmstaff-'.$request->from.'-'. $request->to .'.pdf');
-        return $pdf->stream('tblmstaff-'.$request->from.'-'. $request->to .'.pdf');
+        Mail::send('admin.user.mail', compact('request'), function ($message) use ($request, $pdf) {
+            $message->to($request->email, $request->email)
+                ->subject("Test send mail Staff")
+                ->attachData($pdf->output(), 'tblmstaff-'.$request->from.'-'. $request->to .'.pdf');
+        });         
+        return $pdf->download('tblmstaff-'.$request->from.'-'. $request->to .'.pdf');
     }
 }
